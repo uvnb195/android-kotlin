@@ -1,20 +1,11 @@
 package com.example.lab1.src
 
-fun main () {
-    lab2()
-}
+import kotlin.math.PI
 
-fun lab1 () {
-    println("Đào Hữu Quân - PD09237")
-    println("=========================")
-    println("Quanh năm buôn bán ở mom sông")
-    println("Nuôi đủ năm con với một chồng")
-    println("\tlặn lội thân cờ khi quãng vắng")
-    println("\teo sèo mặt nước buổi đò đồng")
-    println("Một duyên hai nợ âu đành phận")
-    println("Năm nắng mười mưa há chẳng công")
-    println("\tCha mẹ thói đời \"ăn ở bạc\"")
-    println("\tCó chồng hờ hững cũng như không")
+private fun main () {
+    bai1()
+    bai2()
+    bai3()
 }
 
 fun input():Double{
@@ -27,15 +18,30 @@ fun input():Double{
     }
 }
 
-fun lab2 () {
-    print("a=")
+fun bai1 () {
+    print("n = ")
+    val n = input().toInt()
+
+    if (n%2==0) println("$n la so chan.")
+    else println("$n la so le.")
+}
+
+fun bai2 () {
+    print("ban kinh hinh tron r = ")
+    val r = input()
+
+    println("Chu vi hinh tron: ${"%.2f".format((2*r* PI))}")
+    println("Dien tich hinh tron: ${"%.2f".format((r*r* PI))}")
+}
+
+fun bai3 () {
+    print("Chieu dai a = ")
     val a = input()
 
-    print("b=")
+    print("Chieu rong b = ")
     val b = input()
 
-    println("$a + $b = ${"%.1f".format(a+b)}")
-    println("$a - $b = ${"%.1f".format(a-b)}")
-    println("$a x $b = ${"%.1f".format(a*b)}")
-    println("$a ÷ $b = ${"%.1f".format(a/b)}")
+    println("Dien tich: ${"%.2f".format(a*b)}")
+    println("Chu vi: ${"%.2f".format((a+b)*2)}")
+
 }
