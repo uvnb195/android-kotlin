@@ -17,6 +17,9 @@ import com.example.lab1.src.lab3.Lab3Screen
 import com.example.lab1.src.lab4.Lab4ListImage
 import com.example.lab1.src.lab4.Lab4Login
 import com.example.lab1.src.lab4.Lab4NoteList
+import com.example.lab1.src.lab5.Lab5Chips
+import com.example.lab1.src.lab5.Lab5LightControl
+import com.example.lab1.src.lab5.Lab5Login
 import com.example.lab1.ui.theme.Lab1Theme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +29,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Lab1Theme {
                 val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "lab4-note-list") {
+                NavHost(navController = navController, startDestination = "lab5-chips") {
                     composable("lab3"){
                         Lab3Screen(navController)
                     }
@@ -38,6 +41,15 @@ class MainActivity : ComponentActivity() {
                     }
                     composable("lab4-note-list"){
                         Lab4NoteList(navController)
+                    }
+                    composable("lab5-login"){
+                        Lab5Login(navController)
+                    }
+                    composable("lab5-light-control"){
+                        Lab5LightControl(navController)
+                    }
+                    composable("lab5-chips"){
+                        Lab5Chips(navController)
                     }
                 }
             }
